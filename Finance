@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Facts</title>
+  <!-- Load Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.8em;
+      margin: 15px 0;
+    }
+    i {
+      margin-right: 10px;
+      color: #ffd700; /* gold accent for icons */
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffd700;
+      color: #1e3c72;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ffcc00;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Finance Facts</h1>
+    <p id="fact"><i class="fas fa-piggy-bank"></i> Compound interest can make small savings grow significantly over time.</p>
+    <button onclick="showRandomFact()">Random Fact</button>
+  </div>
+
+  <script>
+    const facts = [
+      '<i class="fas fa-piggy-bank"></i> Compound interest can make small savings grow significantly over time.',
+      '<i class="fas fa-chart-line"></i> Diversification reduces investment risk by spreading assets.',
+      '<i class="fas fa-university"></i> Credit scores affect loan approvals and interest rates.',
+      '<i class="fas fa-coins"></i> Inflation decreases the purchasing power of money over time.',
+      '<i class="fas fa-credit-card"></i> Using credit responsibly builds financial trustworthiness.',
+      '<i class="fas fa-hand-holding-usd"></i> Budgeting helps control spending and achieve financial goals.',
+      '<i class="fas fa-file-invoice-dollar"></i> Taxes fund public services but reduce disposable income.'
+    ];
+
+    function showRandomFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById('fact').innerHTML = facts[randomIndex];
+    }
+  </script>
+</body>
+</html>
